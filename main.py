@@ -42,6 +42,8 @@ while game_is_on:
         if player.collision_with_wall():
             score.increase_score()
             score.increase_speed()
+            car = Car()
+            cars_group.append(car)
         if rand_car.distance(player) < 20:
             score.collision_car()
             game_is_on = False
